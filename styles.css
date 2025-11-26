@@ -1,0 +1,939 @@
+/* ===================================
+   TODA Investor Pitch - Stylesheet
+   Dark theme with gold accents
+   =================================== */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0F0F0F;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: 1.25rem; }
+
+p {
+    color: #D1D5DB;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Section Spacing */
+section {
+    min-height: 100vh;
+    padding: 5rem 0;
+    position: relative;
+}
+
+/* Section Headers */
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.section-header.centered {
+    text-align: center;
+}
+
+.section-label {
+    display: inline-block;
+    color: #D4AF37;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    color: #9CA3AF;
+    font-size: 1.125rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.cta-button {
+    background-color: #D4AF37;
+    color: #0F0F0F;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #F5E6D3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(212, 175, 55, 0.5);
+}
+
+/* ===================================
+   SECTION 1: OPENING - THE PROMISE
+   =================================== */
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #242424 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, rgba(15, 15, 15, 0.9), rgba(26, 26, 26, 0.9), rgba(36, 36, 36, 0.9));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    color: #D1D5DB;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-cta {
+    margin-top: 3rem;
+}
+
+/* ===================================
+   SECTION 2: EMOTIONAL STORY
+   =================================== */
+
+.story-section {
+    background-color: #1A1A1A;
+    padding: 8rem 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.story-headline {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.story-text {
+    font-size: 1.125rem;
+    color: #D1D5DB;
+    line-height: 1.9;
+    margin-bottom: 1.5rem;
+}
+
+.story-quote {
+    margin-top: 3rem;
+    padding: 2rem;
+    border-left: 4px solid #D4AF37;
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+.story-quote blockquote {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.story-visual .placeholder-image {
+    aspect-ratio: 4/5;
+}
+
+/* ===================================
+   SECTION 3: SOLUTIONS & MARKET
+   =================================== */
+
+.solutions-section {
+    background-color: #0F0F0F;
+    padding: 8rem 0;
+}
+
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.solution-card {
+    background-color: #242424;
+    padding: 3rem 2rem;
+    border: 1px solid #374151;
+    transition: all 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+    border-color: #D4AF37;
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.2);
+}
+
+.card-icon {
+    margin-bottom: 2rem;
+}
+
+.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #D4AF37, #F5E6D3);
+    border-radius: 50%;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.card-text {
+    color: #D1D5DB;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.solution-badge {
+    padding-top: 1.5rem;
+    border-top: 1px solid #374151;
+}
+
+.solution-badge span {
+    display: block;
+    color: #D4AF37;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.solution-badge p {
+    color: #FFFFFF;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* ===================================
+   SECTION 4: MARKET ANALYSIS
+   =================================== */
+
+.market-section {
+    background-color: #1A1A1A;
+    padding: 8rem 0;
+}
+
+.market-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.stat-card {
+    background-color: #242424;
+    padding: 3rem 2.5rem;
+    border: 1px solid #374151;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: #D4AF37;
+    transform: translateY(-5px);
+}
+
+.stat-card.primary {
+    grid-column: span 1;
+}
+
+.stat-icon {
+    margin-bottom: 1.5rem;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.icon-circle.red {
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+.icon-circle.green {
+    background: linear-gradient(135deg, #10B981, #059669);
+}
+
+.icon-circle.gold {
+    background: linear-gradient(135deg, #D4AF37, #F5E6D3);
+}
+
+.stat-title {
+    font-size: 1.25rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.stat-number {
+    font-size: 3rem;
+    color: #D4AF37;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.stat-label {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.stat-details {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    color: #D4AF37;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.stat-desc {
+    color: #9CA3AF;
+    font-size: 0.875rem;
+}
+
+.stat-metrics {
+    margin-top: 2rem;
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #374151;
+}
+
+.metric-item:last-child {
+    border-bottom: none;
+}
+
+.metric-value {
+    font-size: 2rem;
+    color: #D4AF37;
+    font-weight: 700;
+}
+
+.metric-label {
+    color: #D1D5DB;
+    font-size: 0.875rem;
+    text-align: right;
+    max-width: 60%;
+}
+
+.market-visual {
+    margin: 4rem 0;
+}
+
+.data-sources {
+    text-align: center;
+    color: #6B7280;
+    font-size: 0.875rem;
+    font-style: italic;
+    margin-top: 3rem;
+}
+
+/* ===================================
+   SECTION 5: MARKET ENTRY
+   =================================== */
+
+.entry-section {
+    background-color: #0F0F0F;
+    padding: 8rem 0;
+}
+
+.entry-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.step-card {
+    background-color: #242424;
+    padding: 3rem 2.5rem;
+    border: 1px solid #374151;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    border-color: #D4AF37;
+    transform: translateY(-5px);
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #D4AF37, #F5E6D3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.step-number span {
+    font-size: 2rem;
+    color: #0F0F0F;
+    font-weight: 900;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.step-description {
+    color: #D1D5DB;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.step-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.step-list li {
+    color: #D1D5DB;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.step-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #D4AF37;
+    font-weight: 700;
+}
+
+.entry-visual {
+    margin-top: 4rem;
+}
+
+/* ===================================
+   SECTION 6: MARKETING
+   =================================== */
+
+.marketing-section {
+    background-color: #1A1A1A;
+    padding: 8rem 0;
+}
+
+.marketing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.marketing-card {
+    background-color: #242424;
+    padding: 3rem 2.5rem;
+    border: 1px solid #374151;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.marketing-card:hover {
+    border-color: #D4AF37;
+    transform: translateY(-5px);
+}
+
+.card-icon-large {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-icon-large .icon-placeholder {
+    width: 80px;
+    height: 80px;
+}
+
+.marketing-title {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.marketing-text {
+    color: #D1D5DB;
+    line-height: 1.7;
+}
+
+.marketing-showcase {
+    margin-top: 5rem;
+}
+
+.showcase-title {
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* ===================================
+   SECTION 7: TECHNOLOGY
+   =================================== */
+
+.tech-section {
+    background-color: #0F0F0F;
+    padding: 8rem 0;
+}
+
+.tech-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    margin-bottom: 5rem;
+}
+
+.tech-headline {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+    font-weight: 800;
+}
+
+.tech-text {
+    font-size: 1.125rem;
+    color: #D1D5DB;
+    line-height: 1.9;
+    margin-bottom: 3rem;
+}
+
+.tech-features {
+    margin-top: 3rem;
+}
+
+.feature-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    align-items: start;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #D4AF37, #F5E6D3);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.feature-content h4 {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.feature-content p {
+    color: #9CA3AF;
+    margin-bottom: 0;
+}
+
+.tech-statement {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(245, 230, 211, 0.05));
+    padding: 4rem;
+    border: 2px solid #D4AF37;
+    text-align: center;
+}
+
+.statement-title {
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.statement-text {
+    font-size: 1.25rem;
+    color: #D1D5DB;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ===================================
+   SECTION 8: SCALABILITY
+   =================================== */
+
+.scale-section {
+    background-color: #1A1A1A;
+    padding: 8rem 0;
+}
+
+.scale-projection {
+    margin: 4rem 0;
+}
+
+.scale-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.metric-card {
+    background-color: #242424;
+    padding: 3rem 2rem;
+    border: 1px solid #374151;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-card.highlight {
+    border: 2px solid #D4AF37;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(245, 230, 211, 0.05));
+}
+
+.metric-card .metric-label {
+    display: block;
+    color: #9CA3AF;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+}
+
+.metric-card .metric-value {
+    display: block;
+    font-size: 3rem;
+    color: #D4AF37;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.metric-card .metric-users {
+    display: block;
+    color: #D1D5DB;
+    font-size: 1rem;
+}
+
+.scale-breakdown {
+    margin: 5rem 0;
+}
+
+.breakdown-title {
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.breakdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.revenue-item {
+    background-color: #242424;
+    padding: 2.5rem 2rem;
+    border: 1px solid #374151;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.revenue-item:hover {
+    border-color: #D4AF37;
+}
+
+.revenue-item h4 {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.revenue-item p {
+    color: #9CA3AF;
+    margin-bottom: 1.5rem;
+}
+
+.revenue-percentage {
+    display: inline-block;
+    font-size: 2rem;
+    color: #D4AF37;
+    font-weight: 900;
+}
+
+.final-cta {
+    margin-top: 6rem;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(245, 230, 211, 0.05));
+    border: 2px solid #D4AF37;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.cta-text {
+    font-size: 1.25rem;
+    color: #D1D5DB;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===================================
+   PLACEHOLDER ELEMENTS
+   =================================== */
+
+.placeholder-image,
+.placeholder-chart {
+    background: linear-gradient(135deg, #1A1A1A, #0F0F0F);
+    border: 2px dashed #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    transition: all 0.3s ease;
+}
+
+.placeholder-image:hover,
+.placeholder-chart:hover {
+    border-color: #D4AF37;
+    background: linear-gradient(135deg, #242424, #1A1A1A);
+}
+
+.placeholder-image.small {
+    min-height: 250px;
+}
+
+.placeholder-chart.large {
+    min-height: 500px;
+}
+
+.placeholder-text {
+    color: #6B7280;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 1024px) {
+    section {
+        padding: 4rem 0;
+    }
+
+    .story-grid,
+    .tech-split {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .solutions-grid,
+    .market-stats,
+    .entry-steps,
+    .marketing-grid,
+    .breakdown-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .showcase-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .scale-metrics {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .cta-button {
+        padding: 0.875rem 2rem;
+        font-size: 1rem;
+    }
+
+    .showcase-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
+   ANIMATIONS & TRANSITIONS
+   =================================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.solution-card,
+.stat-card,
+.step-card,
+.marketing-card,
+.revenue-item {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Smooth scroll padding for better UX */
+html {
+    scroll-padding-top: 2rem;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid #D4AF37;
+    outline-offset: 4px;
+}
+
