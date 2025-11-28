@@ -46,15 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// CTA button interactions
-const ctaButtons = document.querySelectorAll('.cta-button');
-ctaButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Placeholder for future CTA action (e.g., contact form, email, etc.)
-        console.log('CTA clicked - Ready to integrate contact functionality');
-        alert('Contact functionality will be integrated in the next phase. For now, reach out directly.');
-    });
-});
 
 // Keyboard navigation enhancement
 document.addEventListener('keydown', (e) => {
