@@ -5,6 +5,9 @@
 
 // Smooth scroll enhancement (for browsers that need it)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Skip the modal trigger
+    if (anchor.id === 'openSourcesModal') return;
+    
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
@@ -82,6 +85,57 @@ document.addEventListener('keydown', (e) => {
                 prevSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
+    }
+});
+
+// Sources Modal Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('sourcesModal');
+    const openBtn = document.getElementById('openSourcesModal');
+    const closeBtn = document.querySelector('.modal-close');
+    const printBtn = document.getElementById('printSourcesBtn');
+    const iframe = document.getElementById('sourcesFrame');
+
+    // Open modal
+    if (openBtn) {
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        });
+    }
+
+    // Close modal
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+        });
+    }
+
+    // Close modal when clicking outside
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Print sources (browser handles PDF creation)
+    if (printBtn) {
+        printBtn.addEventListener('click', () => {
+            // Wait for iframe to load, then print its contents
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+        });
     }
 });
 
