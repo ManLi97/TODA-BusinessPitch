@@ -154,9 +154,9 @@ section {
 
 .story-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
 .story-headline {
@@ -189,6 +189,21 @@ section {
 }
 
 .story-visual .placeholder-image {
+    aspect-ratio: 4/5;
+}
+
+.story-visual {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.story-visual .founder-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
     aspect-ratio: 4/5;
 }
 
